@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENS Domain Marketplace</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>ENS Marketplace</h1>
+    <div class="create-ens">
+      <h2>Create ENS Domain</h2>
+      <input type="text" id="ensName" placeholder="ENS Domain Name">
+      <button onclick="createENS()">Create</button>
+    </div>
+    <div class="list-ens">
+      <h2>List ENS Domain for Sale</h2>
+      <input type="number" id="tokenId" placeholder="Token ID">
+      <input type="number" id="price" placeholder="Price (ETH)">
+      <button onclick="listENSForSale()">List for Sale</button>
+    </div>
+    <div class="transfer-ens">
+      <h2>Transfer ENS Domain</h2>
+      <input type="number" id="transferTokenId" placeholder="Token ID">
+      <input type="text" id="transferTo" placeholder="Receiver Address">
+      <button onclick="transferENS()">Transfer</button>
+    </div>
+    <div class="get-ens-hold">
+      <h2>Check ENS Domains Owned</h2>
+      <button onclick="getENSCount()">Get ENS Count</button>
+      <div id="ensCount"></div>
+    </div>
+    <div class="get-ens-info">
+      <h2>Check ENS Information</h2>
+      <input type="number" id="ensTokenId" placeholder="Token ID">
+      <button onclick="getENSInfo()">Get ENS Info</button>
+      <div id="ensInfo"></div>
+    </div>
+    <div class="contract-info">
+      <h2>Contract Information</h2>
+      <div id="contractName"></div>
+      <div id="contractSymbol"></div>
+      <div id="contractOwner"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.6/web3.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
