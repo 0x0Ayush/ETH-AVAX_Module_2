@@ -1,8 +1,10 @@
 **ENS Domain dApp**
 
-This repository contains a decentralized application (dApp) for managing Ethereum Name Service (ENS) domains. It allows users to create, list, and buy ENS domains using the Ethereum blockchain. The dApp is built using Solidity smart contracts and integrated with MetaMask Wallet !! 
+This repository contains a decentralized application (dApp) for managing Ethereum Name Service (ENS) domains. It allows users to create, list, and buy ENS domains using the Ethereum blockchain. The dApp is built using Solidity smart contracts and integrated with MetaMask Wallet !! The codes are well tested 2-4 times in various situations !!!
 
-**Smart Contract**
+**Smart Contract** 
+
+Links = https://goerli.etherscan.io/token/0x82504eb1067a7c3553d8214fee9f3f179d09942c
 
 The core functionality of the dApp is implemented in the ```ENSMarketplace smart contract.``` It inherits from the **ERC721** standard and extends the **ERC721URIStorage** and **Ownable contract**s from the OpenZeppelin library. The contract includes the following functions:
 
