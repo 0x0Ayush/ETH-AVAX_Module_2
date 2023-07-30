@@ -49,12 +49,12 @@ contract ENSMarketplace is ERC721URIStorage, Ownable {
 
         if (msg.value > price) {
             // Return excess funds to the buyer
-            (bool sent, ) = msg.sender.call{value: msg.value.sub(price)}("");
-            require(sent, "Failed to send excess funds back to the buyer");
+            (bool successExcess, ) = msg.sender.call{value: msg.value.sub(price)}("");
+            require(successExcess, "Failed to send excess funds back to the buyer");
         }
 
-        (bool sent, ) = payable(seller).call{value: price}("");
-        require(sent, "Failed to send Ether to the seller");
+        (bool successSeller, ) = payable(seller).call{value: price}("");
+        require(successSeller, "Failed to send Ether to the seller");
 
         emit ENSBought(tokenId, msg.sender, seller, price);
     }
